@@ -25,89 +25,89 @@ function renderCoursesInTable(series: Serie[]): void {
     coursesTbody.appendChild(trElement);
 
 }
-series.forEach(serie => {
-    let elem = document.getElementById(serie.name);
-    if (elem != null){
-        elem.onclick = (x) => {
-            showInfo(x);
-        }
-    }
+// series.forEach(serie => {
+//     let elem = document.getElementById(serie.name);
+//     if (elem != null){
+//         elem.onclick = (x) => {
+//             showInfo(x);
+//         }
+//     }
     
-})
+// })
 
-function showInfo(x:any){
-    const name: string = x.path[0].id;
-    let serieI: Serie = series.filter(x => {return x.name == name})[0];
-    const image: string = serieI.image;
-    const description: string = serieI.description;
-    const link: string = serieI.link;
+// function showInfo(x:any){
+//     const name: string = x.path[0].id;
+//     let serieI: Serie = series.filter(x => {return x.name == name})[0];
+//     const image: string = serieI.image;
+//     const description: string = serieI.description;
+//     const link: string = serieI.link;
     
-    let divcol = document.createElement("div")
-    divcol.className = "col";
-    divcol.id = "dataCard"
+//     let divcol = document.createElement("div")
+//     divcol.className = "col";
+//     divcol.id = "dataCard"
 
-    let card = document.createElement("div");
-    card.className = "card";
-    card.setAttribute("style", "width: 30rem; background-color:#2C3034")
+//     let card = document.createElement("div");
+//     card.className = "card";
+//     card.setAttribute("style", "width: 30rem; background-color:#2C3034")
 
-    divcol.appendChild(card);
+//     divcol.appendChild(card);
 
-    let img = document.createElement("img")
-    img.className = "card-img-top"+
-    console.log(image);
-    img.src = image;
+//     let img = document.createElement("img")
+//     img.className = "card-img-top"+
+//     console.log(image);
+//     img.src = image;
     
-    card.appendChild(img);
+//     card.appendChild(img);
 
-    let cardB = document.createElement("div");
-    cardB.className = "card-body";
+//     let cardB = document.createElement("div");
+//     cardB.className = "card-body";
 
-    card.appendChild(cardB);
+//     card.appendChild(cardB);
 
-    let title = document.createElement("h5");
-    title.className = "card-title"
-    title.setAttribute("style","color: white");
-    title.innerHTML = name;
+//     let title = document.createElement("h5");
+//     title.className = "card-title"
+//     title.setAttribute("style","color: white");
+//     title.innerHTML = name;
 
-    cardB.appendChild(title);
+//     cardB.appendChild(title);
 
-    let para = document.createElement("p");
-    para.className = "card-text";
-    para.setAttribute("style","color: white");
-    para.innerHTML = description;
+//     let para = document.createElement("p");
+//     para.className = "card-text";
+//     para.setAttribute("style","color: white");
+//     para.innerHTML = description;
 
-    cardB.appendChild(para);
+//     cardB.appendChild(para);
 
-    let cardB2 = document.createElement("div");
-    cardB.className = "card-body";
+//     let cardB2 = document.createElement("div");
+//     cardB.className = "card-body";
 
-    card.appendChild(cardB2);
+//     card.appendChild(cardB2);
 
-    let lin = document.createElement("a");
-    lin.href = link;
-    lin.className = "card-link"
-    lin.innerHTML = link;
+//     let lin = document.createElement("a");
+//     lin.href = link;
+//     lin.className = "card-link"
+//     lin.innerHTML = link;
 
-    cardB2.appendChild(lin);
+//     cardB2.appendChild(lin);
 
 
-    if (document.getElementById("dataCard") == null){
+//     if (document.getElementById("dataCard") == null){
         
-        containerDiv.appendChild(divcol);
+//         containerDiv.appendChild(divcol);
 
-    }
-    else{
-        containerDiv.replaceChild(divcol, document.getElementById("dataCard")!);
-    }
+//     }
+//     else{
+//         containerDiv.replaceChild(divcol, document.getElementById("dataCard")!);
+//     }
 
 
-
-    
 
     
 
     
 
+    
 
-}
+
+// }
 
